@@ -1254,3 +1254,34 @@ ul.multi-checkbox input[type="checkbox"] {
   .instructor-nav { padding: 0.75rem 1rem; }
   .instructor-nav__links a { font-size: 0.8rem; padding: 0.4rem 0.65rem; }
 }
+
+/* Global Lucide Icon Styles & Alignment fixes */
+.lucide, svg.lucide {
+  display: inline-block;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  stroke-width: 2px;
+  vertical-align: -0.22em; /* Align beautifully with inline text */
+  flex-shrink: 0; /* Prevent icons from shrinking in flexbox layouts */
+}
+
+/* Fix spacing for icons inside buttons, links, and navigation items */
+.btn svg.lucide, 
+button svg.lucide, 
+.btn-primary svg.lucide, 
+.btn-secondary svg.lucide,
+a svg.lucide,
+.global-nav__links a svg.lucide,
+.instructor-nav__links a svg.lucide {
+  margin-right: 0.35rem;
+  vertical-align: -0.2em;
+}
+
+/* Avoid margin-right if the button/link is only an icon */
+.btn-icon svg.lucide, 
+button.btn-icon svg.lucide,
+a.btn-icon svg.lucide,
+.icon-only svg.lucide {
+  margin-right: 0 !important;
+}
+
