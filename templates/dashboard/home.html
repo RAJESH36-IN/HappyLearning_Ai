@@ -3,10 +3,20 @@
 
 {% block title %}EduFlow LMS — Empower Your Learning{% endblock %}
 {% block meta_description %}A modern Learning Management System designed to streamline courses, quizzes, and materials with premium performance.{% endblock %}
-{% block body_class %}page-centered{% endblock %}
+{% block body_class %}page-home{% endblock %}
 
 {% block extra_css %}
 <style>
+  body.page-home {
+    padding: 0;
+  }
+  .hero-section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6rem 1.5rem 4rem 1.5rem;
+  }
   .home-card {
     position: relative;
     z-index: 2;
@@ -65,8 +75,9 @@
     z-index: 2;
     width: 100%;
     max-width: 1280px;
-    margin-top: 80px;
+    margin: 80px auto 0 auto;
     text-align: center;
+    padding: 0 1.5rem;
   }
   .home-section h2 {
     font-size: 2.25rem;
@@ -142,21 +153,23 @@
 
 {% block content %}
 
-    <!-- Hero Card -->
-    <div class="home-card">
-        <span class="badge badge-pill" style="margin-bottom: 1.75rem;">EDUFLOW PLATFORM</span>
-        <h1>Empower Your Learning with <span>EduFlow</span></h1>
-        <p class="lead">A modern Learning Management System designed to streamline courses, quizzes, and materials with premium performance.</p>
+    <div class="hero-section-wrapper">
+        <!-- Hero Card -->
+        <div class="home-card">
+            <span class="badge badge-pill" style="margin-bottom: 1.75rem;">EDUFLOW PLATFORM</span>
+            <h1>Empower Your Learning with <span>EduFlow</span></h1>
+            <p class="lead">A modern Learning Management System designed to streamline courses, quizzes, and materials with premium performance.</p>
 
-        <div class="button-grid" role="navigation" aria-label="Site actions">
-            <a href="{% url 'register' %}" class="btn btn-primary btn--lg" id="btn-register">Register Account</a>
-            <a href="{% url 'login' %}" class="btn btn-secondary btn--lg" id="btn-login">Login</a>
-            <a href="{% url 'course_list' %}" class="btn btn-secondary btn--lg" id="btn-browse">Browse Courses</a>
+            <div class="button-grid" role="navigation" aria-label="Site actions">
+                <a href="{% url 'register' %}" class="btn btn-primary btn--lg" id="btn-register">Register Account</a>
+                <a href="{% url 'login' %}" class="btn btn-secondary btn--lg" id="btn-login">Login</a>
+                <a href="{% url 'course_list' %}" class="btn btn-secondary btn--lg" id="btn-browse">Browse Courses</a>
+            </div>
+
+            <a href="/admin/" class="admin-link" id="admin-link">
+                Admin Dashboard &rarr;
+            </a>
         </div>
-
-        <a href="/admin/" class="admin-link" id="admin-link">
-            Admin Dashboard &rarr;
-        </a>
     </div>
 
     <!-- Featured Courses -->
