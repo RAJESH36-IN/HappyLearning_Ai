@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: eduflow-lms
+    env: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn config.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: eduflow-db
+          property: connectionString
+
+databases:
+  - name: eduflow-db
+    plan: free
