@@ -4,45 +4,48 @@
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ── 1. TOKENS ─────────────────────────────────────────────── */
+/* ── 1. TOKENS (Premium Dark Space & Glassmorphism Design System) ── */
 :root {
-  --bg-gradient: #FAFBFC;
-  --bg-gradient-auth: #FAFBFC;
+  --bg-gradient: radial-gradient(circle at 10% 20%, #0a0b10 0%, #0d0f1a 45%, #05060a 100%);
+  --bg-gradient-auth: radial-gradient(circle at 10% 20%, #0a0b10 0%, #0d0f1a 45%, #05060a 100%);
 
-  --card-bg: #FFFFFF;
-  --card-bg-auth: #FFFFFF;
-  --card-border: #E5E7EB;
+  --card-bg: rgba(18, 22, 41, 0.65);
+  --card-bg-auth: rgba(18, 22, 41, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
 
-  --accent-primary: #0F172A;
-  --accent-secondary: #2563EB;
-  --accent-cyan: #06B6D4;
-  --accent-green: #10B981;
-  --accent-red: #EF4444;
-  --accent-amber: #F59E0B;
-  --accent-gold: #D4AF37;
+  --accent-primary: #8b5cf6; /* Neon Violet */
+  --accent-secondary: #3b82f6; /* Vibrant Blue */
+  --accent-cyan: #06b6d4; /* Cyber Cyan */
+  --accent-green: #10b981; /* Emerald Green */
+  --accent-red: #ef4444; /* Rose Red */
+  --accent-amber: #f59e0b;
+  --accent-gold: #fbbf24;
 
-  --text-primary: #111827;
-  --text-muted: #64748B;
-  --text-subtle: #94A3B8;
+  --text-primary: #f8fafc; /* Ice White */
+  --text-muted: #94a3b8; /* Cool Gray */
+  --text-subtle: #475569;
 
-  --input-bg: #FFFFFF;
-  --input-border: #E5E7EB;
-  --input-focus: #2563EB;
+  --input-bg: rgba(13, 16, 31, 0.8);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-focus: #8b5cf6;
 
-  --success: #10B981;
-  --danger:  #EF4444;
-  --warning: #F59E0B;
-  --info:    #06B6D4;
+  --success: #10b981;
+  --danger:  #ef4444;
+  --warning: #f59e0b;
+  --info:    #06b6d4;
 
-  --shadow-sm: 0 4px 8px rgba(0,0,0,.04);
-  --shadow-md: 0 12px 24px rgba(15,23,42,.08);
-  --shadow-lg: 0 24px 48px rgba(15,23,42,.12);
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.6);
 
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-xl: 28px;
   --radius-full: 9999px;
+  
+  --border: rgba(255, 255, 255, 0.08);
+  --surface: rgba(10, 12, 23, 0.85);
 }
 
 /* ── 2. RESET ───────────────────────────────────────────────── */
@@ -159,6 +162,7 @@ body {
 }
 
 /* ── 4. AMBIENT GLOW EFFECTS ────────────────────────────────── */
+/* ── 4. AMBIENT GLOW EFFECTS ────────────────────────────────── */
 .ambient-glow,
 .ambient-glow-1,
 .ambient-glow-2,
@@ -175,7 +179,7 @@ body {
   right: 10%;
   width: 500px;
   height: 500px;
-  background: transparent ;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, rgba(139, 92, 246, 0) 70%);
   filter: blur(100px);
 }
 
@@ -184,7 +188,7 @@ body {
   left: 5%;
   width: 450px;
   height: 450px;
-  background: transparent ;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, rgba(6, 182, 212, 0) 70%);
   filter: blur(90px);
 }
 
@@ -193,7 +197,7 @@ body {
   left: 20%;
   width: 300px;
   height: 300px;
-  background: transparent ;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0) 70%);
   filter: blur(50px);
 }
 
@@ -202,7 +206,7 @@ body {
   left: -10%;
   width: 50vw;
   height: 50vw;
-  background: transparent ;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(99, 102, 241, 0) 70%);
   filter: blur(100px);
   animation: drift 25s infinite alternate ease-in-out;
 }
@@ -212,7 +216,7 @@ body {
   right: -10%;
   width: 60vw;
   height: 60vw;
-  background: transparent ;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 70%);
   filter: blur(120px);
   animation: drift 30s infinite alternate-reverse ease-in-out;
 }
